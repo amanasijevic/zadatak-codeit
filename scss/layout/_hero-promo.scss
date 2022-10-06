@@ -1,0 +1,23 @@
+.hero-promo {
+    position: relative;
+    padding: 78px 0;
+    background-color: #354f52;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__text {
+        h1 {
+            color: $white;
+            margin-bottom: 20px;
+        }
+        p {
+            max-width: 610px;
+            font-size: 24px;
+            color: $white;
+            line-height: 35px;
+            margin-bottom: 30px;
+        }
+    }
+}

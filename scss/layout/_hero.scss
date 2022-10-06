@@ -1,0 +1,41 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100vh;
+    margin-top: -135px;
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 101%;
+        min-height: 101%;
+        max-width: none;
+        max-height: none;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        transition: opacity 1s;
+        object-fit: cover;
+        z-index: 0;
+    }
+    &__text {
+        position: absolute;
+        z-index: 1;
+        left: 240px;
+        top: 50%;
+        transform: translateY(-50%);
+        h1 {
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 35px;
+            color: $white;
+            max-width: 610px;
+            margin-bottom: 30px;
+        }
+    }    
+}

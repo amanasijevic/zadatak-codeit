@@ -1,0 +1,16 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    height: 80px;
+    background-color: $black;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    border-radius: 9px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: #52796f;
+    }
+}
