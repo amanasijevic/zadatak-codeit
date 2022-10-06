@@ -10,7 +10,15 @@
     color: $white;
     border-radius: 9px;
     transition: all .3s ease-in-out;
+    i {
+        margin-left: 10px;
+        transition: all .3s ease-in-out;
+    }
     &:hover {
         background-color: #52796f;
+        letter-spacing: 2px;
+        i {
+            transform: translateX(5px);
+        }
     }
 }
