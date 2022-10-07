@@ -26,3 +26,19 @@
     margin: auto;
   }
   
+  .media-wrapper {
+    position: relative;
+    overflow: hidden;
+    img {
+      bottom: -9999px;
+      height: 100%;
+      left: -9999px;
+      margin: auto;
+      max-width: none;
+      min-width: 100%;
+      position: absolute;
+      right: -9999px;
+      top: -9999px;
+      width: auto;
+    }
+  }

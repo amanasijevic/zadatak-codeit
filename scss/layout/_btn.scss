@@ -21,4 +21,17 @@
             transform: translateX(5px);
         }
     }
+    &--outline {
+        min-width: 370px;
+        height: 55px;
+        background-color: transparent;
+        border: solid $black;
+        color: $black;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: $white;
+            border-color: #52796f;
+        }
+    }
+    
 }
