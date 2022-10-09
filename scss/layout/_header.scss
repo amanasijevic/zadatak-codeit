@@ -15,7 +15,7 @@
             color: $white;
             transition: all .3s ease-in-out;
             &:hover {
-                color: #52796f;
+                color: $hover-color;
             }
         }
         &--cta {
@@ -30,9 +30,10 @@
                 transition: all .3s ease-in-out;
                 &:hover {
                     color: $white;
-                    background-color: #52796f;
+                    background-color: $hover-color;
                 } 
             }
         }
     }
-}
+    
+}        

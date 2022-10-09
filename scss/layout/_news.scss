@@ -1,10 +1,14 @@
 .news {
-    padding: 155px 0 150px 0;
+    position: relative;
+    padding: 150px 0 150px 0;
+    background-color: $white;
+    z-index: 0;
     &__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 45px;
+        color: $black;
         p {
             max-width: 610px;
         }
@@ -28,14 +32,15 @@
             background-color: #cad2c5;
             z-index: -1;
             border-radius: 10px;
-            
-
         }
     }
     &__image {
         padding: 0 15px;
         .media-wrapper {
             padding-bottom: 66.5%;
+            img {
+                border-radius: 20px;
+            }
         }
     }
     &__text {

@@ -1,0 +1,41 @@
+.brand-slider {
+    position: relative;
+    padding-top: 105px;
+    background-color: $white;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 45px;
+        color: $black;
+        p {
+            max-width: 610px;
+        }
+    }
+    .splide {
+        &__list {
+            align-items: center;
+        }
+        &__slide {
+            padding: 0 20px;
+        }
+        &__arrow--prev {
+            left: -50px;
+        }
+        &__arrow--next {
+            right: -50px;
+        }
+        &__pagination {
+            bottom: -40px;
+        }
+        &__pagination__page {
+            &.is-active {
+                width: 28px;
+                height: 12px;
+                border-radius: 6px;
+                background-color: $black;
+            }
+        }
+
+    }
+}

@@ -5,6 +5,10 @@
     border: 0;
     font-size: 100%;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   ol,
   ul {
