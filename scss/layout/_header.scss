@@ -5,6 +5,14 @@
     align-items: center;
     padding: 55px 150px 0 150px;
     z-index: 1;
+    &__logo-brand {
+        h1 {
+        font-family: $ff-logo;
+        font-size: 50px;
+        font-weight: bold;
+        color: $white;
+        }
+    }
     &__navbar-list {
         display: flex;
         align-items: center;

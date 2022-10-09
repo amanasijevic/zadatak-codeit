@@ -28,6 +28,10 @@
   .container {
     max-width: 75vw;
     margin: auto;
+    @include respond-to('large') {
+      max-width: 100%;
+      padding: 0 30px;
+    }
   }
   
   .media-wrapper {

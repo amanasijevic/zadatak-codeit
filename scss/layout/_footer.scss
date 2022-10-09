@@ -1,21 +1,60 @@
 .footer {
     padding: 78px 0 30px 0;
     background-color: $footer-background;
-    .address {
+    @include respond-to('small') {
+        padding: 30px 0 15px 0;
+    }
+    &__logo-brand {
+        h1 {
+        font-family: $ff-logo;
+        font-size: 50px;
+        font-weight: bold;
+        color: $white;
+        @include respond-to('extra-small') {
+            text-align: center;
+            font-size: 35px;
+        }
+        }
+    }
+    &__address {
         font-family: $ff-text;
         font-size: 20px;
         color: $white;
+        @include respond-to('small') {
+            font-size: 18px;
+        }
+        @include respond-to('extra-small') {
+            display: block;
+            text-align: center;
+        }
+    }
+    &__links {
+        margin: 140px auto 45px auto;
+        @include respond-to('small') {
+            margin: 40px auto;
+        }
     }
     &__navbar-list {
         display: flex;
         justify-content: center;
-        margin: 142px 0 47px 0;
+        @include respond-to('extra-small') {
+            flex-direction: column;
+        }
     }
     &__navbar-item {
-        margin-left: 40px;
+        margin: 0 20px;
+        @include respond-to('small') {
+            margin: 0 10px;
+        }
+        @include respond-to('extra-small') {
+            margin: 10px auto;
+        }
         a {
             color: $white;
             transition: all .3s ease-in-out;
+            @include respond-to('small') {
+                font-size: 16px;
+            }
             &:hover {
                 color: $hover-color;
             }
@@ -25,7 +64,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        padding: 47px 0 31px 0;
+        padding: 45px 0 30px 0;
         &::after {
             content: '';
             position: absolute;
@@ -35,15 +74,24 @@
             top: 0;
             margin: auto;
             background-color: $white;
-            height: 1px;
+            height: 2px;
             opacity: 0.1;
         }
         a {
-            margin-left: 37px;
+            margin: 0 18px;
+            @include respond-to('extra-small') {
+                margin: 0 15px;
+            }
             i {
                 color: $white;
                 font-size: 37px;
                 transition: all .3s ease-in-out;
+                @include respond-to('small') {
+                    font-size: 28px;
+                }
+                @include respond-to('extra-small') {
+                    font-size: 24px;
+                }
                 &:hover {
                     color: $hover-color;
                 }
@@ -52,9 +100,14 @@
     }
    
     &__copyrights {
-        color: $white;
-        text-align: center;
-        opacity: 0.5;
+        p {
+            color: $white;
+            text-align: center;
+            opacity: 0.5;
+            @include respond-to('small') {
+                font-size: 14px;
+            }
+        }
     }
 }
 
