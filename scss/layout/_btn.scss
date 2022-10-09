@@ -10,6 +10,11 @@
     color: $white;
     border-radius: 9px;
     transition: all .3s ease-in-out;
+    @include respond-to('medium') {
+        min-width: 200px;
+        height: 60px;
+    }
+
     i {
         margin-left: 10px;
         transition: all .3s ease-in-out;

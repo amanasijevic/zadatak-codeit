@@ -1,17 +1,41 @@
 .hero-promo {
     position: relative;
-    padding: 78px 0;
+    padding: 80px 0;
     background-color: $sub-main-color;
+    @include respond-to('medium') {
+        padding: 50px 0;
+    }
+    @include respond-to('small') {
+        padding: 30px 0;
+    }
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include respond-to('medium') {
+            flex-direction: column;
+        }
     }
     &__text {
         width: 50%;
+        @include respond-to('medium-large') {
+            padding-right: 15px;
+        }
+        @include respond-to('medium') {
+            width: 75%;
+            margin-bottom: 50px;
+            text-align: center;
+            padding-right: 0;
+        }
+        @include respond-to('small') {
+            width: 100%;
+        }
         h1 {
             color: $white;
             margin-bottom: 20px;
+            @include respond-to('small') {
+                margin-bottom: 10px;
+            }
         }
         p {
             max-width: 610px;
@@ -19,11 +43,29 @@
             color: $white;
             line-height: 35px;
             margin-bottom: 30px;
+            @include respond-to('medium') {
+                font-size: 20px;
+                line-height: 30px;
+                margin: auto auto 30px auto;
+            }
+            @include respond-to('small') {
+                margin: auto auto 20px auto;
+            }
+            @include respond-to('extra-small') {
+                font-size: 18px;
+                line-height: 25px;
+            }
         }
     }
     &__image {
         width: 50%;
         max-width: 595px;
+        @include respond-to('medium') {
+            width: 75%;
+        }
+        @include respond-to('medium') {
+            width: 100%;
+        }
         .media-wrapper {
             padding-bottom: 125.1%;
         }

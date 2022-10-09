@@ -28,6 +28,9 @@
   .container {
     max-width: 75vw;
     margin: auto;
+    @include respond-to('medium-large') {
+      max-width: 90vw;
+    }
     @include respond-to('large') {
       max-width: 100%;
       padding: 0 30px;

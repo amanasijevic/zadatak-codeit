@@ -29,6 +29,11 @@ img, video {
   max-width: 75vw;
   margin: auto;
 }
+@media (max-width: 1400px) {
+  .container {
+    max-width: 90vw;
+  }
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 100%;
@@ -58,6 +63,17 @@ h1 {
   font-size: 70px;
   font-weight: 500;
   line-height: 80px;
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 h2 {
@@ -331,6 +347,12 @@ a {
   border-radius: 9px;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 992px) {
+  .btn {
+    min-width: 200px;
+    height: 60px;
+  }
+}
 .btn i {
   margin-left: 10px;
   transition: all 0.3s ease-in-out;
@@ -386,20 +408,58 @@ a {
 
 .hero-promo {
   position: relative;
-  padding: 78px 0;
+  padding: 80px 0;
   background-color: #354f52;
+}
+@media (max-width: 992px) {
+  .hero-promo {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero-promo {
+    padding: 30px 0;
+  }
 }
 .hero-promo__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 992px) {
+  .hero-promo__wrapper {
+    flex-direction: column;
+  }
+}
 .hero-promo__text {
   width: 50%;
+}
+@media (max-width: 1400px) {
+  .hero-promo__text {
+    padding-right: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-promo__text {
+    width: 75%;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero-promo__text {
+    width: 100%;
+  }
 }
 .hero-promo__text h1 {
   color: white;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .hero-promo__text h1 {
+    margin-bottom: 10px;
+  }
 }
 .hero-promo__text p {
   max-width: 610px;
@@ -408,9 +468,37 @@ a {
   line-height: 35px;
   margin-bottom: 30px;
 }
+@media (max-width: 992px) {
+  .hero-promo__text p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: auto auto 30px auto;
+  }
+}
+@media (max-width: 767px) {
+  .hero-promo__text p {
+    margin: auto auto 20px auto;
+  }
+}
+@media (max-width: 565px) {
+  .hero-promo__text p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 .hero-promo__image {
   width: 50%;
   max-width: 595px;
+}
+@media (max-width: 992px) {
+  .hero-promo__image {
+    width: 75%;
+  }
+}
+@media (max-width: 992px) {
+  .hero-promo__image {
+    width: 100%;
+  }
 }
 .hero-promo__image .media-wrapper {
   padding-bottom: 125.1%;
