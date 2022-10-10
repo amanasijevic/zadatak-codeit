@@ -17,20 +17,34 @@ h2 {
     font-size: 50px;
     font-weight: 500;
     line-height: 80px;
+    @include respond-to('extra-small') {
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
 
 h3 {
     font-family: $ff-text;
     font-size: 26px;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 35px;
+    @include respond-to('extra-large') {
+        font-size: 20px;
+        line-height: 30px;
+      }
 }
 
 p {
     font-family: $ff-text;
     font-size: 20px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 30px;
+    @include respond-to('extra-large') {
+        font-size: 18px;
+    }
+    @include respond-to('extra-small') {
+        font-size: 16px;
+    }
 }
 
 .p-large {
@@ -38,14 +52,14 @@ p {
     font-size: 24px;
     font-weight: 500;
     line-height: 35px;
+    @include respond-to('extra-large') {
+        font-size: 20px;
+    }
+    @include respond-to('extra-small') {
+        font-size: 18px;
+    }
 }
 
-h3 {
-    font-family: $ff-text;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.5;
-}
 
 a {
     font-family: $ff-text;

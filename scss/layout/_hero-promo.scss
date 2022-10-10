@@ -1,7 +1,7 @@
 .hero-promo {
     position: relative;
     padding: 80px 0;
-    background-color: $sub-main-color;
+    background-color: $main-color;
     @include respond-to('medium') {
         padding: 50px 0;
     }

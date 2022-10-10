@@ -9,6 +9,12 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    &.lock {
+      overflow: hidden;
+    }
+  }
   
   ol,
   ul {
@@ -36,11 +42,16 @@
       padding: 0 30px;
     }
   }
+
+  .main {
+    position: relative;
+    margin-top: -135px;
+  }
   
   .media-wrapper {
     position: relative;
     overflow: hidden;
-    img {
+    img, video {
       bottom: -9999px;
       height: 100%;
       left: -9999px;

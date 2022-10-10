@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 100vh;
-    margin-top: -135px;
+
     &__video {
         position: absolute;
         top: 50%;
@@ -13,18 +13,23 @@
         max-height: none;
         width: auto;
         height: auto;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%,-50%);
         background-size: cover;
         transition: opacity 1s;
         object-fit: cover;
-        z-index: 0;
     }
     &__text {
         position: absolute;
-        z-index: 1;
+        z-index: 0;
         left: 240px;
         top: 50%;
         transform: translateY(-50%);
+        @include respond-to('extra-large') {
+            left: 5vw;
+        }
+        @include respond-to('large') {
+            left: 30px;
+        }
         h1 {
             font-weight: 700;
             color: $white;

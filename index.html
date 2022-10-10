@@ -8,9 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/ca86d9adec.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.3.1/dist/css/splide.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.css"
+    integrity="sha512-mXY1LeioQ/fb7ALXZiaUvv0UAapAWkF1UI7X+4lXOJySh13sVf/4WG+01splhtJrp39UL9Sq3e8JWsbhf2sm2Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.3.1/dist/js/splide.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.3/swiper-bundle.min.js"
+    integrity="sha512-4MIWP9ui3MVR0iuCnJ9l6b9DWrCspboU0BbX5DNXoSJ4ZQXjrY7+sPJEehrR0rAx88jVUT9f9Hoa7fawwB3jHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     <title>Restaurant Meana | Home</title>
@@ -22,10 +28,10 @@
                 <h1>Restaurant Meana</h1>
             </a>
         </div>
-        <nav class="header__navbar">
+        <nav id="js-navbar" class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item">
-                        <a href="#">Home</a>                        
+                        <a href="#">Home</a>                       
                     </li>
                     <li class="header__navbar-item">
                         <a href="#">Partners</a>
@@ -47,15 +53,21 @@
                     </li>
                 </ul>
         </nav>
-        <button id="btn-scroll-top"onclick="topFunction()">
+        <button class="header__hamburger-menu" onclick="openMenu()">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+        </button>
+        <button id="js-close-menu" class="header__menu-close" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button id="btn-scroll-top" onclick="topFunction()">
             <i class="fa-solid fa-angle-up"></i>
         </button>
     </header>
-    <main>
+    <main class="main">
     <section class="hero">
-        <div class="hero__video">
-            <video src="img/video/video-promo.mp4" loop plays-inline ></video>
-         </div>
+         <video src="img/video/video-promo.mp4" id="video-promo" class="hero__video" autoplay loop plays-inline ></video>
          <div class="hero__text">
             <h1>Heading</h1>
             <p class="p-large">
@@ -72,30 +84,47 @@
             <div class="brand-slider__info">
                 <h2>Partners</h2>
                 <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium.
                 </p>
             </div>
-            <div class="splide js-splide-partners">
-                <div class="splide__track">
-                   <ul class="splide__list">
-                      <li class="splide__slide">
-                         <img src="img/frikom.png" alt="frikom">
-                      </li>
-                      <li class="splide__slide">
-                         <img src="img/my-chef.png" alt="my-chef">
-                      </li>
-                      <li class="splide__slide">
-                         <img src="img/dr-oetker.png" alt="dr.oetker">
-                      </li>
-                      <li class="splide__slide">
-                         <img src="img/neoplanta.png" alt="neoplanta">
-                      </li>
-                      <li class="splide__slide">
-                         <img src="img/nutrino-lab.png" alt="nutrino-lab">
-                      </li>
-                   </ul>
+            <div class="brand-slider__slider">
+                <div class="swiper js-brand-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"> <img src="img/frikom.png" alt="frikom"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"> <img src="img/my-chef.png" alt="my-chef"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"> <img src="img/dr-oetker.png" alt="dr.oetker"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"> <img src="img/neoplanta.png" alt="neoplanta"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"> <img src="img/nutrino-lab.png" alt="nutrino-lab"> </a>
+                        </div>
+                    </div>
                 </div>
-             </div>  
+                <div class="swiper__arrows">
+                    <div class="icon-arrow icon-arrow--prev js-swiper-prev-brand"
+                        data-anim="opacity" data-anim-delay=".6" data-anim-disable-leave="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.601" height="16.503">
+                            <path
+                                d="M.228 7.702a.78.78 0 0 0-.006 1.1l7.592 7.474a.774.774 0 0 0 1.1 0l.458-.458a.774.774 0 0 0 0-1.1L2.781 8.252l6.592-6.471a.774.774 0 0 0 0-1.1L8.915.223a.774.774 0 0 0-1.1 0Z"
+                                fill="#767676" /></svg> </div>
+                    <div class="icon-arrow icon-arrow--next js-swiper-next-brand"
+                        data-anim="opacity" data-anim-delay=".6" data-anim-disable-leave="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.601" height="16.503">
+                            <path
+                                d="M.228 7.702a.78.78 0 0 0-.006 1.1l7.592 7.474a.774.774 0 0 0 1.1 0l.458-.458a.774.774 0 0 0 0-1.1L2.781 8.252l6.592-6.471a.774.774 0 0 0 0-1.1L8.915.223a.774.774 0 0 0-1.1 0Z"
+                                fill="#767676" /></svg>
+                    </div>
+                </div>
+                <div class="swiper-pagination js-brand-pagination"></div>
+            </div>
         </div>
     </section>
     <section class="news">

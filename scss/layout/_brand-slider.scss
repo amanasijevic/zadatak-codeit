@@ -1,41 +1,115 @@
 .brand-slider {
-    position: relative;
-    padding-top: 105px;
-    background-color: $white;
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 45px;
-        color: $black;
-        p {
-            max-width: 610px;
-        }
+	position: relative;
+	padding-top: 105px;
+	background-color: $white;
+	@include respond-to('medium') {
+		padding-top: 50px;
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 45px;
+		color: $black;
+		@include respond-to('medium') {
+			flex-direction: column;
+		}
+		h2 {
+			@include respond-to('extra-small') {
+				margin-bottom: 20px;
+			}
+		}
+		p {
+			max-width: 610px;
+			@include respond-to('medium') {
+				text-align: center;
+			}
+			@include respond-to('extra-small') {
+				max-width: 100%;
+			}
+		}
+	}
+    &__slider {
+        position: relative;
     }
-    .splide {
-        &__list {
-            align-items: center;
-        }
-        &__slide {
-            padding: 0 20px;
-        }
-        &__arrow--prev {
-            left: -50px;
-        }
-        &__arrow--next {
-            right: -50px;
-        }
-        &__pagination {
-            bottom: -40px;
-        }
-        &__pagination__page {
-            &.is-active {
-                width: 28px;
-                height: 12px;
-                border-radius: 6px;
-                background-color: $black;
-            }
-        }
-
-    }
+	.swiper {
+		&-slide {
+			a {
+				display: block;
+				text-align: center;
+			}
+		}
+		&__arrows {
+			.icon-arrow {
+				background-color: rgba(118, 118, 118, .04);
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				cursor: pointer;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				overflow: hidden;
+				transition: all .3s ease-in-out;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+        		&--prev {
+					left: -100px;
+					svg {
+						margin-left: -3px;
+					}
+				}
+				&--next {
+					right: -100px;
+					svg {
+						transform: scaleX(-1);
+						margin-right: -3px;
+					}
+				}
+                &:hover {
+					background-color: $hover-color;
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+				}
+			}
+		}
+		&-pagination {
+			margin-bottom: -40px;
+			text-align: center;
+			bottom: -5px !important;
+			&.swiper-pagination-fraction {
+				width: auto;
+				bottom: auto;
+				left: auto;
+				bottom: unset;
+				left: unset;
+			}
+			.swiper-pagination-bullet {
+				width: 12px;
+				flex: 0 0 12px;
+				height: 12px;
+				background-color: rgba(5, 7, 8, .5);
+				opacity: 0.5 !important;
+				margin: 0 4px;
+				transition: .35s cubic-bezier(.25, .46, .45, .94);
+				border-radius: 50%;
+				&:hover {
+					opacity: 1 !important;
+				}
+				&-active {
+					opacity: 1 !important;
+					background-color: $black;
+					width: 28px;
+					flex: 0 0 28px;
+					border-radius: 6px;
+					&:hover {}
+				}
+			}
+		}
+	}
 }

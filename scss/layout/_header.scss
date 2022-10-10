@@ -3,22 +3,65 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 150px 0 150px;
+    height: 135px;
+    padding: 0 150px;
     z-index: 1;
+    @include respond-to('extra-large') {
+        padding: 0 5vw;
+    }
+    @include respond-to('large') {
+        padding: 0 30px;
+    }
     &__logo-brand {
+        @include respond-to('medium-large') {
+            position: relative;
+            z-index: 10;
+        }
         h1 {
-        font-family: $ff-logo;
-        font-size: 50px;
-        font-weight: bold;
-        color: $white;
+            font-family: $ff-logo;
+            font-size: 50px;
+            font-weight: bold;
+            color: $white;
+            @include respond-to('extra-small') {
+                font-size: 30px;
+            }
+        }
+    }
+    &__navbar {
+        @include respond-to('medium-large') {
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            background: $main-color;
+            z-index: 9;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease-in-out;
+        }
+        &.is-active {
+            visibility: visible;
+            opacity: 1;
         }
     }
     &__navbar-list {
         display: flex;
         align-items: center;
+        @include respond-to('medium-large') {
+            flex-direction: column;
+        }
     }
     &__navbar-item {
-        margin-left: 40px;
+        margin: 0 20px;
+        @include respond-to('medium-large') {
+            margin: 10px auto;
+        }
         a {
             color: $white;
             transition: all .3s ease-in-out;
@@ -36,6 +79,9 @@
                 text-align: center;
                 border-radius: 9px;
                 transition: all .3s ease-in-out;
+                @include respond-to('extra-small') {
+                    padding: 17px 70px;
+                }
                 &:hover {
                     color: $white;
                     background-color: $hover-color;
@@ -43,5 +89,57 @@
             }
         }
     }
-    
+    &__hamburger-menu {
+        width: 35px;
+        height: 30px;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        right: 5vw;
+        cursor: pointer;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        background: none;
+        border: none;
+        @include respond-to('large') {
+            right: 30px;
+        }
+        @include respond-to('medium-large') {
+            display: flex;
+        }
+        .line {
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+        }
+    }
+    &__menu-close {
+        position: absolute;
+        z-index: 9;
+        top: 45px;
+        right: 5vw;
+        cursor: pointer;
+        background: none;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        @include respond-to('large') {
+            right: 35px;
+        }
+        @include respond-to('extra-small') {
+            top: 55px;
+        }
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+        i {
+           font-size: 40px;
+           color: $white;
+           @include respond-to('extra-small') {
+              font-size: 30px;
+          }
+        }
+    }
 }        
