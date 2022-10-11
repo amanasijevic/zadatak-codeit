@@ -55,14 +55,33 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+                @include respond-to('large') {
+                    width: 30px;
+                    height: 30px;
+                }
+                @include respond-to('extra-small') {
+                    display: none;
+                }
         		&--prev {
 					left: -100px;
+                    @include respond-to('medium-large') {
+                        left: -50px;
+                    }
+                    @include respond-to('large') {
+                        left: -20px;
+                    }
 					svg {
 						margin-left: -3px;
 					}
 				}
 				&--next {
 					right: -100px;
+                    @include respond-to('medium-large') {
+                        right: -50px;
+                    }
+                    @include respond-to('large') {
+                        right: -20px;
+                    }
 					svg {
 						transform: scaleX(-1);
 						margin-right: -3px;
