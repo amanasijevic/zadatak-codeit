@@ -2,12 +2,12 @@
 @import './utilities/breakpoints';
 @import "./base/reset";
 @import './base/typography';
-@import './layout/header';
-@import './layout/hero';
-@import './layout/main';
-@import './layout/footer';
-@import "./layout/btn";
-@import "./layout/hero-promo";
-@import "./layout/brand-slider";
-@import "./layout/news";
+@import './components/header';
+@import './components/hero';
+@import './components/main';
+@import './components/footer';
+@import "./components/btn";
+@import "./components/hero-promo";
+@import "./components/brand-slider";
+@import "./components/news";
 
